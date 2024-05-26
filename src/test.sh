@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 1. example_maker.py 스크립트 실행
-python3 example_maker.py 2>&1 | tee -a test.log
+#python3 example_maker.py 2>&1 | tee -a test.log
 
 # 2. 로그 파일 초기화
 log_file="test.log"
