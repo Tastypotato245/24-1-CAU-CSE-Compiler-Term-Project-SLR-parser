@@ -38,10 +38,10 @@ example_grammar = {
     'FDECL': ['char id ( ) { return character ; }', 'int id ( ) { return true ; }'],
     'ARG': ['int id'],
     'MOREARGS': [', float id'],
-    'BLOCK': ['return literal ;', 'return character ;', 'return true ;', 'return false ;'],
-    'STMT': ['return literal ;', 'return character ;', 'return true ;', 'return false ;'],
+    'BLOCK': ['int id ;'],
+    'STMT': ['int id ;'],
     'COND': ['true', 'false'],
-    'ELSE': ['else { return character ; }', 'else { return true ; }'],
+    'ELSE': ['else { }'],
     'RETURN': ['return literal ;', 'return character ;', 'return true ;', 'return false ;'],
     'VTYPE': ['int', 'float', 'char'],
     'ADDSUB': ['+', '-'],
@@ -76,8 +76,8 @@ def validate_terminal_end(language):
 
 os.makedirs('rand_example', exist_ok=True)
 
-max_depth = 15
-num_cases_per_depth = 5
+max_depth = 30
+num_cases_per_depth = 300
 for depth in range(1, max_depth + 1):
     filename = f'rand_example/{depth}'
     cases = []

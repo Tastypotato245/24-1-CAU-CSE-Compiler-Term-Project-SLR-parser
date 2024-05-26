@@ -68,7 +68,7 @@ def main():
     for line in lines:
         tokens = line.strip().split()
         tokens.append("$");
-        print(tokens)
+#        print(tokens)
         if parser.parse(tokens):
             print("ACCEPT")
         else:
