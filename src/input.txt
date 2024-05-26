@@ -1,1 +1,2 @@
-int id ( ) { if ( true == false ) { } return id ; }
+float id ( int id ) { return character ; }
+
