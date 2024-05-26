@@ -1,0 +1,29 @@
+int id ( int id ) { return literal ; return false ; } 
+
+
+char id ( int id ) { return true ; return character ; } char id = literal ; 
+float id = true ; char id ( ) { return character ; } 
+
+float id ( int id ) { return literal ; return character ; } int id = true ; 
+float id ( int id ) { return true ; return true ; } int id = false ; 
+float id ; int id = false ; 
+float id ; char id = character ; 
+
+float id ; char id = literal ; 
+int id ( int id ) { return false ; return literal ; } int id ; 
+
+float id = false ; int id ; 
+
+int id ; 
+float id ( int id ) { return literal ; return true ; } char id = character ; 
+char id = character ; 
+float id ( int id ) { return literal ; return literal ; } int id = false ; 
+int id ( int id ) { return false ; return true ; } char id = character ; 
+
+int id ( int id ) { return literal ; return false ; } int id = true ; 
+int id ( int id ) { return false ; return character ; } 
+int id = true ; int id = false ; 
+
+float id ( int id ) { return true ; return character ; } int id ( ) { return true ; } 
+
+

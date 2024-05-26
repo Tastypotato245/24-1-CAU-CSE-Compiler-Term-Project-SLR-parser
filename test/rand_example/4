@@ -1,0 +1,30 @@
+char id ( char id , float id ) {  return literal ; } char id ; char id ( ) { return character ; } 
+char id (  ) {  return false ; } char id ( int id ) { return true ; return false ; } int id = true ; 
+
+char id ( char id , float id ) { return true ; return literal ; return false ; } int id = literal ; int id ( ) { return true ; } 
+
+char id = false ; 
+char id (  ) {  return false ; } 
+char id ; 
+char id ; float id ( int id ) { return false ; return character ; } 
+
+
+
+float id ( int id , float id ) {  return literal ; } char id = character ; int id ( ) { return true ; } 
+
+float id ; int id ( int id ) { return true ; return character ; } 
+
+int id ; 
+char id = literal ; char id ; int id ( ) { return true ; } 
+
+float id ( float id , float id ) { return true ; return true ; return true ; } 
+
+int id = true ; float id ; int id ( ) { return true ; } 
+float id ; char id ( int id ) { return literal ; return character ; } int id ( ) { return true ; } 
+char id ; char id ( int id ) { return literal ; return character ; } int id = false ; 
+
+float id ( int id , float id ) { return literal ; return character ; return character ; } float id ( int id ) { return false ; return character ; } 
+int id ; char id ( int id ) { return literal ; return character ; } 
+int id ( char id , float id ) { return true ; return literal ; return character ; } float id ( int id ) { return false ; return literal ; } 
+
+float id (  ) {  return true ; } 
