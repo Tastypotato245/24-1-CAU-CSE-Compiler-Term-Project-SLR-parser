@@ -1,0 +1,10 @@
+int id ( ) { return true ; } 
+
+char id ( ) { return character ; } 
+int id ( ) { return true ; } 
+int id ; 
+char id ( ) { return character ; } 
+char id ( ) { return character ; } 
+char id = character ; 
+
+int id ; 

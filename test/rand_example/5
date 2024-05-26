@@ -1,0 +1,10 @@
+char id = character ; 
+char id (  ) { while ( true ) { return character ; } return false ; return literal ; return num ; } float id ; 
+int id = literal ; 
+float id ( int id  ) { int id = false ; return true ; return true ; return literal ; } char id (  ) { return false ; return character ; return literal ; } int id ; char id ( ) { return character ; } 
+
+
+int id ( int id  ) { int id = false ;  return character ; } 
+
+int id ; char id ; 
+char id = literal ; int id = false ; float id ; 

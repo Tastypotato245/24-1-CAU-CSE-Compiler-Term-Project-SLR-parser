@@ -1,0 +1,9 @@
+float id ( int id ) { return true ; return character ; } char id = literal ; 
+
+int id ( int id ) { return character ; return literal ; } char id = literal ; 
+char id ( int id ) { return false ; return true ; } int id ( ) { return true ; } 
+
+int id ; char id = literal ; 
+int id = true ; char id ( ) { return character ; } 
+char id ( int id ) { return literal ; return literal ; } 
+char id ( int id ) { return false ; return true ; } char id ( ) { return character ; } 
