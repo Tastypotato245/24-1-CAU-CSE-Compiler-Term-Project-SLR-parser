@@ -79,7 +79,7 @@ os.makedirs('rand_example', exist_ok=True)
 max_depth = 30
 num_cases_per_depth = 300
 for depth in range(1, max_depth + 1):
-    filename = f'rand_example/{depth}'
+    filename = f'rand_example/{depth}.accept.test'
     cases = []
     for _ in range(num_cases_per_depth):
         language = generate_random_language('CODE', 0, depth)
