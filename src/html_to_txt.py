@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 
-with open("./table_data/SLRtable.html", "r", encoding="utf-8") as file:
+with open("./data/SLRtable.html", "r", encoding="utf-8") as file:
     html_content = file.read()
 
 soup = BeautifulSoup(html_content, 'html.parser')

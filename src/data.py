@@ -1,20 +1,44 @@
-rules = [
-    ('E', 1),  # E -> T
-    ('T', 3),  # T -> T * F
-    ('T', 1),  # T -> F
-    ('F', 3),  # F -> ( T )
-    ('F', 1)   # F -> id
-]
+def parse_grammar(grammar_file):
+    rules = []
+    with open(grammar_file, 'r') as file:
+        for line in file:
+            line = line.strip()
+            if '->' in line:
+                left, right = line.split('->')
+                left = left.strip()
+                right = right.strip()
+                symbols = right.split()
+                rule_length = len(symbols)
+                rules.append((left, rule_length))
+    return rules
 
-# 파서 테이블 (예제에서는 고정된 테이블 사용)
-parse_table = [
-    { '(': 's3', 'id': 's4', 'T': 1, 'F': 2},
-    {'*': 's5', '$': 'acc'},
-    {'*': 'r2', ')': 'r2', '$': 'r2'},  # Changed r2 to r4
-    {'(': 's3','id': 's4', 'T': 6, 'F': 2},  # Changed T to 7
-    {'*': 'r4', ')': 'r4', '$':'r4'},
-    {'(': 's3', 'id': 's4', 'F':7},  # Changed r6 to r5 and removed '+'
-    {'*': 's5', ')': 's8'},
-    {'*': 'r1', ')': 'r1', '$': 'r1'},
-    {'*': 'r3', ')': 'r3', '$': 'r3'},
-]
+def parse_parse_table(parse_table_file):
+    parse_table = []
+    with open(parse_table_file, 'r') as file:
+        for line in file:
+            line = line.strip()
+            if line.startswith('parse_table = ['):
+                continue
+            if line.startswith(']'):
+                break
+            if line.endswith(','):
+                line = line[:-1]
+            if line.startswith('{') and line.endswith('}'):
+                row = eval(line)
+                parse_table.append(row)
+    return parse_table
+
+grammar_file = './data/grammar.txt'
+parse_table_file = './data/parse_table.txt'
+
+rules = parse_grammar(grammar_file)
+parse_table = parse_parse_table(parse_table_file)
+
+if __name__ == "__main__":
+    print("Rules:")
+    for rule in rules:
+        print(f"('{rule[0]}', {rule[1]})")
+
+    print("\nParse Table:")
+    for row in parse_table:
+        print(row)
