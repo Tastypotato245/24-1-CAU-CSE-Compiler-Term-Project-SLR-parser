@@ -14,13 +14,13 @@ class SLRParser:
         current_state=0
         token_index=0
         while True:
-            print('step')
+            #print('step')
             current_state=self.statestack[-1]
             current_token=tokens[token_index]
             action= self.parse_table[current_state][current_token]
-            print(f'current state: {current_state}')
-            print(f'current token: {current_token}')
-            print(f'action : {action}')
+#            print(f'current state: {current_state}')
+#            print(f'current token: {current_token}')
+#            print(f'action : {action}')
 
             if action.startswith('s'):
                 self.inputStack.append(current_token)
@@ -29,20 +29,30 @@ class SLRParser:
             elif action.startswith('r'):
                 for _ in range(self.rules[int(action[1:])][1]):
                     self.statestack.pop()
-                    print(self.rules[int(action[1:])][1])
-                    print(f'pop:{self.inputStack.pop()}')
-                self.inputStack.append(self.rules[int(action[1])][0])
+#                   print(self.rules[int(action[1:])][1])
+#                   print(f'debug : {int(action[1:])}')
+#                   print(f'pop:{self.inputStack.pop()}')
+                self.inputStack.append(self.rules[int(action[1:])][0])
                 current_state=self.statestack[-1]
                 current_token=self.inputStack[-1]
                 action=self.parse_table[current_state][current_token]
                 #goto case임
                 self.statestack.append(int(action))
             elif action=='acc':
-                print('Accept')
-                return
-            print(f'state stack: {self.statestack}')
-            print(f'input stack: {self.inputStack}')
-            print()
+                self.statestack = []
+                self.statestack.append(0)
+                self.inputStack=[]
+                self.inputStack.append('$')
+                return True
+            else :
+                self.statestack = []
+                self.statestack.append(0)
+                self.inputStack=[]
+                self.inputStack.append('$')
+                return False
+#            print(f'state stack: {self.statestack}')
+#            print(f'input stack: {self.inputStack}')
+#            print()
 
 def main():
     parser = SLRParser(parse_table, rules)
@@ -57,6 +67,8 @@ def main():
     
     for line in lines:
         tokens = line.strip().split()
+        tokens.append("$");
+        print(tokens)
         if parser.parse(tokens):
             print("ACCEPT")
         else:
