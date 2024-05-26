@@ -10,6 +10,15 @@ class SLRParser:
         self.inputStack=[]
         self.inputStack.append('$')
 
+    def value_exists(self, current_state, current_token:str):
+        try:
+            value = self.parse_table[current_state][current_token]
+            return True
+        except KeyError:
+            return False
+        except IndexError:
+            return False
+    
     def parse(self, tokens):
         current_state=0
         token_index=0
@@ -17,7 +26,13 @@ class SLRParser:
             #print('step')
             current_state=self.statestack[-1]
             current_token=tokens[token_index]
-            action= self.parse_table[current_state][current_token]
+
+            try:
+                action = self.parse_table[current_state][current_token]
+            except KeyError:
+                return False
+            except IndexError:
+                return False
 #            print(f'current state: {current_state}')
 #            print(f'current token: {current_token}')
 #            print(f'action : {action}')
@@ -35,7 +50,12 @@ class SLRParser:
                 self.inputStack.append(self.rules[int(action[1:])][0])
                 current_state=self.statestack[-1]
                 current_token=self.inputStack[-1]
-                action=self.parse_table[current_state][current_token]
+                try:
+                    action = self.parse_table[current_state][current_token]
+                except KeyError:
+                    return False
+                except IndexError:
+                    return False
                 #goto case임
                 self.statestack.append(int(action))
             elif action=='acc':
@@ -67,7 +87,7 @@ def main():
     
     for line in lines:
         tokens = line.strip().split()
-        tokens.append("$");
+        tokens.append("$")
         print(tokens)
         if parser.parse(tokens):
             print("ACCEPT")
