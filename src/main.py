@@ -9,80 +9,68 @@ class SLRParser:
     def __init__(self, parse_table, rules):
         self.parse_table = parse_table
         self.rules = rules
-        self.stack = [0]
+        self.statestack = []
+        self.statestack.append(0)
+        self.inputStack=[]
+        self.inputStack.append('$')
 
     def parse(self, tokens):
-        i = 0
+        current_state=0
+        token_index=0
         while True:
-            state = self.stack[-1]
-            current_token = tokens[i]
-
-            # 디버깅 출력을 추가합니다.
-            print(f"Current stack: {self.stack}")
-            print(f"Current token: {current_token}")
-            print(f"Current state: {state}")
-
-            if current_token not in self.parse_table[state]:
-                raise SyntaxError(f"Unexpected token '{current_token}' at position {i}")
-
-            action = self.parse_table[state][current_token]
-            print(f"Action: {action}")
+            print('step')
+            current_state=self.statestack[-1]
+            current_token=tokens[token_index]
+            action= self.parse_table[current_state][current_token]
+            print(f'current state: {current_state}')
+            print(f'current token: {current_token}')
+            print(f'action : {action}')
 
             if action.startswith('s'):
-                self.stack.append(int(action[1:]))
-                i += 1
-
+                self.inputStack.append(current_token)
+                self.statestack.append(int(action[1]))
+                token_index+=1
             elif action.startswith('r'):
-                rule_index = int(action[1:])
-                if rule_index >= len(self.rules):
-                    raise IndexError(f"Rule index {rule_index} out of range")
-                lhs, rhs_len = self.rules[rule_index]
-                for _ in range(len(self.stack)):
-                    self.stack.pop()
-
-                state = self.stack[-1]
-                if lhs not in self.parse_table[state]:
-                    raise SyntaxError(f"Unexpected symbol '{lhs}' in parse table")
-                self.stack.append(self.parse_table[state][lhs])
-
-            elif action == 'acc':
-                print("Accepted")
+                for _ in range(self.rules[int(action[1])][1]):
+                    self.statestack.pop()
+                    print(self.rules[int(action[1])][1])
+                    print(f'pop:{self.inputStack.pop()}')
+                self.inputStack.append(self.rules[int(action[1])][0])
+                current_state=self.statestack[-1]
+                current_token=self.inputStack[-1]
+                action=self.parse_table[current_state][current_token]
+                self.statestack.append(int(action))
+            elif action=='acc':
+                print('Accept')
                 return
-            else:
-                raise SyntaxError("Unknown action")
-
-    def display_stack(self):
-        print("Stack:", self.stack)
-
+            print(f'state stack: {self.statestack}')
+            print(f'input stack: {self.inputStack}')
+            print()
 
 # 문법 규칙
 rules = [
-    ('E', 3),  # E -> E + T
     ('E', 1),  # E -> T
     ('T', 3),  # T -> T * F
     ('T', 1),  # T -> F
-    ('F', 3),  # F -> ( E )
+    ('F', 3),  # F -> ( T )
     ('F', 1)   # F -> id
 ]
 
 # 파서 테이블 (예제에서는 고정된 테이블 사용)
 parse_table = [
-    {'id': 's5', '(': 's4', 'E': 1, 'T': 2, 'F': 3},
-    {'+': 's6', '$': 'acc'},
-    {'+': 'r2', '*': 's7', '$': 'r2'},
-    {'+': 'r4', '*': 'r4', '$': 'r4'},
-    {'id': 's5', '(': 's4', 'E': 8, 'T': 2, 'F': 3},
-    {'+': 'r5', '*': 'r5', '$': 'r5'},  # Changed r6 to r5
-    {'id': 's5', '(': 's4', 'T': 9, 'F': 3},
-    {'id': 's5', '(': 's4', 'F': 10},
-    {'+': 's6', ')': 's11'},
-    {'+': 'r1', '*': 's7', ')': 'r1', '$': 'r1'},
-    {'+': 'r3', '*': 'r3', ')': 'r3', '$': 'r3'},
-    {'+': 'r5', '*': 'r5', ')': 'r5', '$': 'r5'}
+    { '(': 's3', 'id': 's4', 'T': 1, 'F': 2},
+    {'*': 's5', '$': 'acc'},
+    {'*': 'r2', ')': 'r2', '$': 'r2'},  # Changed r2 to r4
+    {'(': 's3','id': 's4', 'T': 6, 'F': 2},  # Changed T to 7
+    {'*': 'r4', ')': 'r4', '$':'r4'},
+    {'(': 's3', 'id': 's4', 'F':7},  # Changed r6 to r5 and removed '+'
+    {'*': 's5', ')': 's8'},
+    {'*': 'r1', ')': 'r1', '$': 'r1'},
+    {'*': 'r3', ')': 'r3', '$': 'r3'},
 ]
 
 # 토큰 예제 (id + id * id)
-tokens = ['id', '+', 'id', '*', 'id', '$']
+tokens = ['id', '*', 'id', '$']
 
 parser = SLRParser(parse_table, rules)
 parser.parse(tokens)
