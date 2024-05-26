@@ -1,3 +1,2 @@
-int id ;
+float id ( int id ) { return character ; }
 
-int id ;
