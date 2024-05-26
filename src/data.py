@@ -8,7 +8,10 @@ def parse_grammar(grammar_file):
                 left = left.strip()
                 right = right.strip()
                 symbols = right.split()
-                rule_length = len(symbols)
+                if right == '\'\'':
+                    rule_length = 0
+                else :
+                    rule_length = len(symbols)
                 rules.append((left, rule_length))
     return rules
 

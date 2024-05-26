@@ -1,5 +1,5 @@
-float id (  ) { if ( true ) {  } else { return true ; }  return false ; } float id (  ) { id = true ; return false ; return true ; return true ; } char id ; 
-char id ; float id = false ; char id (  ) {  return character ; } float id = true ; int id = true ; 
-float id = literal ; int id ( int id  ) {  return literal ; } char id = false ; 
 
-char id ( int id  ) { if ( false == false ) {  } else { return character ; }  return character ; } 
+
+int id (  ) {  return character ; } float id (  ) {  return literal ; } char id ; int id ( int id ) { return literal ; return false ; } int id = true ; 
+float id ( char id  ) { char id ;  return literal ; } 
+char id ; 

@@ -1,5 +1,4 @@
-float id ; float id ; 
-float id = true ; 
-char id (  ) { while ( true ) { id = true ;  }  return num * num + num * ( num ) / num * num + id / num - num - num - num ; } 
-int id (  ) {  return true ; } int id ; char id = character ; 
-float id ; char id ( int id  ) { if ( false != true ) { while ( true == false ) {  }  }  id = false ;  return id - num + num * num ; } float id (  ) {  return character ; } int id = literal ; float id ; 
+char id = character ; 
+char id = literal ; int id = num ; char id ; 
+int id (  ) { while ( false ) { if ( false ) {  }  int id ;  } while ( false != true == true != true ) {  }  return literal ; } 
+float id = true ; float id ; float id ; 
