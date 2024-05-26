@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 
-with open("./table_data/SLRtable.html", "r", encoding="utf-8") as file:
+with open("./data/SLRtable.html", "r", encoding="utf-8") as file:
     html_content = file.read()
 
 soup = BeautifulSoup(html_content, 'html.parser')
@@ -35,7 +35,7 @@ if lr_table_view_div:
         elif command == "acc":
             table[-1][symbol[i % (len(symbol) + 1) - 1]] = 'acc'
 
-    with open("./table_data/parsing_table.txt", "w", encoding="utf-8") as file:
+    with open("./table_data/parse_table.txt", "w", encoding="utf-8") as file:
         file.write("parse_table = [\n")
         for state in table:
             file.write("    {")
