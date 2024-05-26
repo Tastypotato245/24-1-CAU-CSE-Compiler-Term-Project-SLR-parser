@@ -1,3 +1,4 @@
+from data.data import grammar, parse_table
 
 def parse(input_tokens):
 

@@ -1,9 +1,50 @@
+char id ( char id  ) {  return num ; } int id ; char id ( char id , float id ) {  return character ; } int id ( int id ) { return true ; return false ; } int id = false ; 
+float id ; int id = literal ; 
+
+char id ( char id  ) { id = literal ;  return literal ; } int id (  ) { while ( false ) { return literal ; }  return literal ; } int id ; int id ( int id ) { return character ; return true ; } char id = literal ; 
+int id = num ; float id (  ) { if ( false ) { return literal ; } else { return true ; }  return false ; } char id = true ; 
+int id ; float id ; int id (  ) { return character ; return literal ; return character ; } 
 
 
-int id ; int id = true ; int id ; int id ( int id ) { return false ; return character ; } char id ( ) { return character ; } 
+float id ; float id = character ; char id (  ) { return true ; return true ; return character ; } float id ; int id ( ) { return true ; } 
+int id ( float id  ) { float id ;  return literal ; } 
 int id ; 
-int id = num + num ; 
-float id = false ; float id = true ; 
-char id (  ) {  return num ; } char id = num ; 
+int id (  ) {  return num + num ; } 
 
-float id = literal ; int id (  ) { while ( true ) { return true ; } return literal ; return character ; return num ; } float id (  ) {  return literal ; } float id ( int id ) { return literal ; return character ; } char id ( ) { return character ; } 
+int id ( float id , float id  ) {  return num ; } float id = character ; char id = character ; int id ( int id ) { return true ; return character ; } char id ( ) { return character ; } 
+
+float id (  ) {  return character ; } 
+char id ; float id = true ; float id ; int id ; int id = true ; 
+
+char id ; int id ; char id ; float id = false ; int id ( ) { return true ; } 
+int id ; float id ; float id = character ; float id ( int id ) { return literal ; return literal ; } int id ( ) { return true ; } 
+int id (  ) { float id ;  return false ; } 
+char id ; char id (  ) {  return literal ; } 
+float id ; char id ( float id , float id , float id ) {  return character ; } int id (  ) { return character ; return character ; return true ; } int id ( int id ) { return false ; return false ; } char id ( ) { return character ; } 
+
+char id = literal ; char id = character ; char id (  ) { return character ; return character ; return character ; } 
+float id = character ; int id = true ; int id = literal ; float id ( int id ) { return true ; return literal ; } char id = character ; 
+char id = literal ; float id ; 
+int id = num ; char id ; float id = true ; 
+int id ( char id  ) { char id ;  return character ; } int id = true ; float id ( float id , float id ) {  return false ; } float id ; 
+int id ( float id  ) { if ( false != true ) {  } else { return false ; }  return false ; } float id ( float id , float id , float id ) {  return literal ; } 
+
+char id (  ) { if ( false ) { return character ; return true ; }   return true ; } 
+char id = literal ; 
+
+
+float id = num ; float id = character ; float id (  ) {  return literal ; } char id ( int id ) { return true ; return true ; } int id ( ) { return true ; } 
+int id ( int id  ) { if ( true == false ) {  } else { return character ; } char id = literal ; return literal ; return character ; return true ; } char id (  ) { int id ; return character ; return false ; return true ; } char id ; int id ( int id ) { return character ; return true ; } int id = true ; 
+
+
+int id (  ) { char id ; char id = character ; return character ; return literal ; return false ; } float id ; 
+int id ( char id  ) { float id = false ;  return false ; } char id = literal ; char id (  ) { return true ; return character ; return true ; } float id ; 
+
+int id = true ; int id = num ; char id = literal ; 
+int id ; char id = literal ; int id = false ; char id ( int id ) { return true ; return true ; } char id ( ) { return character ; } 
+float id ; int id = character ; char id ( float id , float id ) { return character ; return false ; return character ; } float id = literal ; 
+char id ; float id ( float id  ) { while ( true ) { return character ; }  return literal ; } int id (  ) { return true ; return character ; return character ; } float id = true ; 
+float id ; 
+int id ( int id  ) {  return literal ; } int id = true ; int id ; 
+
+float id = character ; char id = false ; int id ; char id ( int id ) { return false ; return false ; } 

@@ -77,7 +77,7 @@ def validate_terminal_end(language):
 os.makedirs('rand_example', exist_ok=True)
 
 max_depth = 20
-num_cases_per_depth = 10
+num_cases_per_depth = 50
 for depth in range(1, max_depth + 1):
     filename = f'rand_example/{depth}'
     cases = []
