@@ -90,9 +90,9 @@ def main():
         tokens.append("$")
         print(tokens)
         if parser.parse(tokens):
-            print("ACCEPT")
+            print("HOGEUN_KYUSUNG_SLR_PARSER RESULT: ACCEPT")
         else:
-            print("REJECT")
+            print("HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT")
 
 if __name__ == "__main__":
     main()
