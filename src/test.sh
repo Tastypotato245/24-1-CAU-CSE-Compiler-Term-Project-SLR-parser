@@ -24,17 +24,26 @@ for file in rand_example/*; do
     results=$(python3 main.py "$file" 2>&1)
     echo "$results" >> "$log_file"
     
+    line_num=0
     while IFS= read -r result; do
+        line_num=$((line_num + 1))
+        line_content=$(sed "${line_num}q;d" "$file")
         if [[ $result == "HOGEUN_KYUSUNG_SLR_PARSER RESULT: ACCEPT" ]]; then
             file_total_cases=$((file_total_cases + 1))
             total_cases=$((total_cases + 1))
             file_passed_cases=$((file_passed_cases + 1))
             passed_cases=$((passed_cases + 1))
+            if [[ $file == *"reject_"* ]]; then
+                echo -e "\tERROR: Unexpected ACCEPT at $file:$line_num - $line_content" | tee -a "$log_file"
+            fi
         elif [[ $result == "HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT" ]]; then
             file_total_cases=$((file_total_cases + 1))
             total_cases=$((total_cases + 1))
             file_rejected_cases=$((file_rejected_cases + 1))
             rejected_cases=$((rejected_cases + 1))
+            if [[ $file == *"accept_"* ]]; then
+                echo -e "\tERROR: Unexpected REJECT at $file:$line_num - $line_content" | tee -a "$log_file"
+            fi
         fi
     done <<< "$results"
 
@@ -58,7 +67,12 @@ else
     echo "No cases to test." | tee -a "$log_file"
 fi
 
-# 5. 아스키 아트 그래프 출력
+# 5. 예상치 못한 결과가 없을 때 메시지 출력
+if [ ${#unexpected_cases[@]} -eq 0 ]; then
+    echo -e "\033[0;34m** PERFECT **\033[0m" | tee -a "$log_file"
+fi
+
+# 6. 아스키 아트 그래프 출력
 echo "" | tee -a "$log_file"
 echo "Pass Percentage per File:" | tee -a "$log_file"
 for result in "${file_results[@]}"; do
@@ -67,8 +81,11 @@ for result in "${file_results[@]}"; do
     rejected_percentage=$(echo $result | awk '{print $3}')
 
     max_hashes=50
-    passed_hashes=$(printf "%.0s#" $(seq 1 $(printf "%.0f" $(echo "($passed_percentage / 100) * $max_hashes" | bc))))
-    rejected_hashes=$(printf "%.0s#" $(seq 1 $(printf "%.0f" $(echo "($rejected_percentage / 100) * $max_hashes" | bc))))
+    passed_hashes_count=$(printf "%.0f" $(echo "($passed_percentage / 100) * $max_hashes" | bc -l))
+    rejected_hashes_count=$(printf "%.0f" $(echo "($rejected_percentage / 100) * $max_hashes" | bc -l))
+
+    passed_hashes=$(printf "%.0s#" $(seq 1 $passed_hashes_count))
+    rejected_hashes=$(printf "%.0s#" $(seq 1 $rejected_hashes_count))
 
     # 색상 설정
     passed_color="\033[0;32m"  # 초록색
