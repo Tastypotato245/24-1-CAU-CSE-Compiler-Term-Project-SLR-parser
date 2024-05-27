@@ -88,7 +88,7 @@ def main():
     for line in lines:
         tokens = line.strip().split()
         tokens.append("$")
-        print(tokens)
+#        print(tokens)
         if parser.parse(tokens):
             print("HOGEUN_KYUSUNG_SLR_PARSER RESULT: ACCEPT")
         else:

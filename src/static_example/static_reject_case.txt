@@ -1,0 +1,50 @@
+int id
+float id
+char id
+int id = ;
+float id = ;
+char id = ;
+int id = unknown ;
+float id = 'a' ;
+char id = 5 ;
+int id = 3.14 ;
+if ( true ) { int id }
+while ( false ) { int id }
+int id ( ) { int id return num ; }
+char id ( { return 'a' ; }
+int id = ( num + ) ;
+float id = ( num * ) ;
+if ( true == ) { int id ; } else { float id ; }
+while ( != true ) { char id ; }
+int id ( int id , ) { int id ; return num ; }
+float id ( float id , int ) { float id ; return num ; }
+int id ( int id , float id ) { int id return num ; }
+char id ( ) { return 'c' }
+if ( true == ) { int id ; } else { float id ; }
+while ( != true ) { char id ; }
+int id = ( num + ) ;
+float id = ( num * ) ;
+int id ( int id , ) { int id ; return num ; }
+float id ( float id , int ) { float id ; return num ; }
+int id ( ) { int id return num ; }
+char id ( ) { return 'a' ; } else { float id ; }
+float id ; int id ( int id ) { float id ; }
+if ( true == true ) { int id ;
+while ( true != false ) { char id ;
+int id ; int id ( ) { int id return num ; } float id ;
+float id ( float id , int id { float id ; return num ; }
+int id ( int id , float id ) { int id ; return ; }
+char id = 'a'
+int id = num float id = num ;
+if ( true == true ) int id ; else { float id ; }
+while ( true != false ) char id ;
+int id ( ) { int id = ( num + ; return num ; }
+float id ( ) { float id = ( num * ; return num ; }
+char id ( ) { if ( true == ) { return 'a' ; } }
+int id ( ) { while ( != false ) { int id ; } return num ; }
+float id ( float id , int id , ) { float id ; return num ; }
+int id ( int id , float ) { int id ; return num ; }
+char id ( ) { return 'a' ; else { return 'b' ; } }
+if ( true ) { int id ; else { float id ; } }
+while ( false ) { int id ; if ( true ) { char id ; }
+int id ( ) { if ( true == false ) { return num ; } else return num ; }

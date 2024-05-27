@@ -4,7 +4,7 @@
 python3 example_maker.py 2>&1 | tee -a test.log
 
 # 2. 로그 파일 초기화
-log_file="test.log"
+log_file="random_test.log"
 > "$log_file"
 
 # 3. main.py 스크립트를 rand_example 디렉터리 내의 파일들에 대해 실행하고 결과를 percentage로 계산
@@ -67,12 +67,8 @@ else
     echo "No cases to test." | tee -a "$log_file"
 fi
 
-# 5. 예상치 못한 결과가 없을 때 메시지 출력
-if [ ${#unexpected_cases[@]} -eq 0 ]; then
-    echo -e "\033[0;34m** PERFECT **\033[0m" | tee -a "$log_file"
-fi
 
-# 6. 아스키 아트 그래프 출력
+# 아스키 아트 그래프 출력
 echo "" | tee -a "$log_file"
 echo "Pass Percentage per File:" | tee -a "$log_file"
 for result in "${file_results[@]}"; do
@@ -96,3 +92,6 @@ for result in "${file_results[@]}"; do
     echo -e "$file: Passed: [${passed_color}$passed_hashes${reset}] $passed_percentage%, Rejected: [${rejected_color}$rejected_hashes${reset}] $rejected_percentage%" | tee -a "$log_file"
 done
 
+if [ ${#unexpected_cases[@]} -eq 0 ]; then
+    echo -e "\033[0;34m** PERFECT **\033[0m" | tee -a "$log_file"
+fi

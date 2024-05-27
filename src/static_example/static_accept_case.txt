@@ -1,0 +1,29 @@
+int id ;
+float id ;
+char id ;
+int id = num ;
+float id = num ;
+char id = character ;
+int id = num ;
+float id = num ;
+char id = character ;
+int id = true ;
+int id = false ;
+int id ( int id , float id ) { int id ; return num ; }
+char id ( ) { return character ; }
+int id ( ) { if ( true == true ) { int id ; } else { float id ; } return id ; }
+int id ( ) { while ( false != true ) { char id ; } return num ; }
+int id = ( num + num ) ;
+float id = ( num * num ) ;
+int id ( ) { int id ; return num ; }
+float id ( float id ) { float id ; return num ; }
+int id ; float id ; char id ;
+int id = num ; float id = num ; char id = character ;
+int id ( int id ) { if ( true == false ) { } else {  } return num ; }
+char id ( ) { while ( true == true ) { if ( false == false ) {  } } return character ; }
+float id ( ) { int id ; while ( num != num ) { float id ; if ( true == false ) {  } } return num ; }
+int id ; int id ( ) { int id ; return num ; } float id ;
+int id ( int id , char id ) { int id ; return num ; } float id ( ) { return num ; }
+int id ( ) { if ( true == false ) { while ( true != false ) { char id ; } } else { int id ; } return id ; }
+int id = ( num + num ) * ( num - num ) ;
+float id = ( num / num ) + ( num * num ) ;

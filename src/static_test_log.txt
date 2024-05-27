@@ -1,0 +1,20 @@
+Testing file static_test/static_accept_case.txt:
+Traceback (most recent call last):
+  File "/Users/leekyusung/project/24-1-CAU-CSE-Compiler-Term-Project-SLR-parser/src/main.py", line 98, in <module>
+    main()
+  File "/Users/leekyusung/project/24-1-CAU-CSE-Compiler-Term-Project-SLR-parser/src/main.py", line 85, in main
+    with open(input_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'static_test/static_accept_case.txt'
+File static_test/static_accept_case.txt: No cases to test.
+Testing file static_test/static_reject_case.txt:
+Traceback (most recent call last):
+  File "/Users/leekyusung/project/24-1-CAU-CSE-Compiler-Term-Project-SLR-parser/src/main.py", line 98, in <module>
+    main()
+  File "/Users/leekyusung/project/24-1-CAU-CSE-Compiler-Term-Project-SLR-parser/src/main.py", line 85, in main
+    with open(input_file, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'static_test/static_reject_case.txt'
+File static_test/static_reject_case.txt: No cases to test.
+No cases to test.
+[0;34m** PERFECT **[0m

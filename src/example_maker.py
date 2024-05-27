@@ -57,19 +57,19 @@ example_grammar_reject = {
     'CODE': ['!~'],
     'CODE_D': ['}~'],
     'VDECL': ['char id literal ;'],
-    'ASSIGN': ['id == true'],
+    'ASSIGN': ['id === true'],
     'RHS': ['rhserror'],
     'EXPR': ['exprerror'],
     'EXPR_D': ['exprerror'],
     'EXPR_DD': ['exprerror'],
-    'FDECL': ['char ) { return character ; }'],
+    'FDECL': ['char ) return character ; }'],
     'ARG': ['int id id'],
     'MOREARGS': [', float id ;'],
     'BLOCK': ['int id num ;'],
-    'STMT': ['int num = id ;'],
+    'STMT': ['int num num = id ;'],
     'COND': ['?'],
-    'ELSE': ['else'],
-    'RETURN': ['false ;'],
+    'ELSE': ['else ()'],
+    'RETURN': ['false return ;'],
     'VTYPE': ['isanghantype'],
     'ADDSUB': ['+~-'],
     'MULTDIV': ['*.../'],
@@ -134,8 +134,8 @@ def ensure_reject_case_uses_example_grammar(case):
 
 os.makedirs('rand_example', exist_ok=True)
 
-max_depth = 30
-num_cases_per_depth = 100
+max_depth = 20
+num_cases_per_depth = 500
 for depth in range(1, max_depth + 1):
     if depth < 10:
         accept_filename = f'rand_example/accept_0{depth}.test'

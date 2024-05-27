@@ -1,2 +1,1 @@
-float id ( int id ) { return character ; }
-
+float id = ( num / num ) + ( num * num ) ;
