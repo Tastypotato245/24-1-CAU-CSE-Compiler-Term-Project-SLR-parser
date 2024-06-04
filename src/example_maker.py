@@ -135,7 +135,7 @@ def ensure_reject_case_uses_example_grammar(case):
 os.makedirs('rand_example', exist_ok=True)
 
 max_depth = 20
-num_cases_per_depth = 500
+num_cases_per_depth = 1000
 for depth in range(1, max_depth + 1):
     if depth < 10:
         accept_filename = f'rand_example/accept_0{depth}.test'

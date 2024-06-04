@@ -1,95 +1,961 @@
 Testing file static_example/static_accept_case.txt:
+CODE_D
+    |--VDECL
+    |   |--VTYPE
+    |   |   |--int
+    |   |--id
+    |   |--;
+    |--CODE_D
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: ACCEPT
+CODE_D
+    |--VDECL
+    |   |--VTYPE
+    |   |   |--float
+    |   |--id
+    |   |--;
+    |--CODE_D
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: ACCEPT
+CODE_D
+    |--VDECL
+    |   |--VTYPE
+    |   |   |--char
+    |   |--id
+    |   |--;
+    |--CODE_D
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: ACCEPT
+CODE_D
+    |--VDECL
+    |   |--VTYPE
+    |   |   |--int
+    |   |--ASSIGN
+    |   |   |--id
+    |   |   |--=
+    |   |   |--RHS
+    |   |       |--EXPR
+    |   |           |--EXPR_D
+    |   |               |--EXPR_DD
+    |   |                   |--num
+    |   |--;
+    |--CODE_D
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: ACCEPT
+CODE_D
+    |--VDECL
+    |   |--VTYPE
+    |   |   |--float
+    |   |--ASSIGN
+    |   |   |--id
+    |   |   |--=
+    |   |   |--RHS
+    |   |       |--EXPR
+    |   |           |--EXPR_D
+    |   |               |--EXPR_DD
+    |   |                   |--num
+    |   |--;
+    |--CODE_D
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: ACCEPT
+CODE_D
+    |--VDECL
+    |   |--VTYPE
+    |   |   |--char
+    |   |--ASSIGN
+    |   |   |--id
+    |   |   |--=
+    |   |   |--RHS
+    |   |       |--character
+    |   |--;
+    |--CODE_D
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: ACCEPT
+CODE_D
+    |--VDECL
+    |   |--VTYPE
+    |   |   |--int
+    |   |--ASSIGN
+    |   |   |--id
+    |   |   |--=
+    |   |   |--RHS
+    |   |       |--EXPR
+    |   |           |--EXPR_D
+    |   |               |--EXPR_DD
+    |   |                   |--num
+    |   |--;
+    |--CODE_D
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: ACCEPT
+CODE_D
+    |--VDECL
+    |   |--VTYPE
+    |   |   |--float
+    |   |--ASSIGN
+    |   |   |--id
+    |   |   |--=
+    |   |   |--RHS
+    |   |       |--EXPR
+    |   |           |--EXPR_D
+    |   |               |--EXPR_DD
+    |   |                   |--num
+    |   |--;
+    |--CODE_D
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: ACCEPT
+CODE_D
+    |--VDECL
+    |   |--VTYPE
+    |   |   |--char
+    |   |--ASSIGN
+    |   |   |--id
+    |   |   |--=
+    |   |   |--RHS
+    |   |       |--character
+    |   |--;
+    |--CODE_D
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: ACCEPT
+CODE_D
+    |--VDECL
+    |   |--VTYPE
+    |   |   |--int
+    |   |--ASSIGN
+    |   |   |--id
+    |   |   |--=
+    |   |   |--RHS
+    |   |       |--BOOLSTR
+    |   |           |--true
+    |   |--;
+    |--CODE_D
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: ACCEPT
+CODE_D
+    |--VDECL
+    |   |--VTYPE
+    |   |   |--int
+    |   |--ASSIGN
+    |   |   |--id
+    |   |   |--=
+    |   |   |--RHS
+    |   |       |--BOOLSTR
+    |   |           |--false
+    |   |--;
+    |--CODE_D
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: ACCEPT
+CODE_D
+    |--FDECL
+    |   |--VTYPE
+    |   |   |--int
+    |   |--id
+    |   |--(
+    |   |--ARG
+    |   |   |--VTYPE
+    |   |   |   |--int
+    |   |   |--id
+    |   |   |--MOREARGS
+    |   |       |--,
+    |   |       |--VTYPE
+    |   |       |   |--float
+    |   |       |--id
+    |   |       |--MOREARGS
+    |   |--)
+    |   |--{
+    |   |--BLOCK
+    |   |   |--STMT
+    |   |   |   |--VDECL
+    |   |   |       |--VTYPE
+    |   |   |       |   |--int
+    |   |   |       |--id
+    |   |   |       |--;
+    |   |   |--BLOCK
+    |   |--RETURN
+    |   |   |--return
+    |   |   |--RHS
+    |   |   |   |--EXPR
+    |   |   |       |--EXPR_D
+    |   |   |           |--EXPR_DD
+    |   |   |               |--num
+    |   |   |--;
+    |   |--}
+    |--CODE_D
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: ACCEPT
+CODE_D
+    |--FDECL
+    |   |--VTYPE
+    |   |   |--char
+    |   |--id
+    |   |--(
+    |   |--ARG
+    |   |--)
+    |   |--{
+    |   |--BLOCK
+    |   |--RETURN
+    |   |   |--return
+    |   |   |--RHS
+    |   |   |   |--character
+    |   |   |--;
+    |   |--}
+    |--CODE_D
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: ACCEPT
+CODE_D
+    |--FDECL
+    |   |--VTYPE
+    |   |   |--int
+    |   |--id
+    |   |--(
+    |   |--ARG
+    |   |--)
+    |   |--{
+    |   |--BLOCK
+    |   |   |--STMT
+    |   |   |   |--if
+    |   |   |   |--(
+    |   |   |   |--COND
+    |   |   |   |   |--BOOLSTR
+    |   |   |   |   |   |--true
+    |   |   |   |   |--COMP
+    |   |   |   |   |   |--==
+    |   |   |   |   |--COND
+    |   |   |   |       |--BOOLSTR
+    |   |   |   |           |--true
+    |   |   |   |--)
+    |   |   |   |--{
+    |   |   |   |--BLOCK
+    |   |   |   |   |--STMT
+    |   |   |   |   |   |--VDECL
+    |   |   |   |   |       |--VTYPE
+    |   |   |   |   |       |   |--int
+    |   |   |   |   |       |--id
+    |   |   |   |   |       |--;
+    |   |   |   |   |--BLOCK
+    |   |   |   |--}
+    |   |   |   |--ELSE
+    |   |   |       |--else
+    |   |   |       |--{
+    |   |   |       |--BLOCK
+    |   |   |       |   |--STMT
+    |   |   |       |   |   |--VDECL
+    |   |   |       |   |       |--VTYPE
+    |   |   |       |   |       |   |--float
+    |   |   |       |   |       |--id
+    |   |   |       |   |       |--;
+    |   |   |       |   |--BLOCK
+    |   |   |       |--}
+    |   |   |--BLOCK
+    |   |--RETURN
+    |   |   |--return
+    |   |   |--RHS
+    |   |   |   |--EXPR
+    |   |   |       |--EXPR_D
+    |   |   |           |--EXPR_DD
+    |   |   |               |--id
+    |   |   |--;
+    |   |--}
+    |--CODE_D
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: ACCEPT
+CODE_D
+    |--FDECL
+    |   |--VTYPE
+    |   |   |--int
+    |   |--id
+    |   |--(
+    |   |--ARG
+    |   |--)
+    |   |--{
+    |   |--BLOCK
+    |   |   |--STMT
+    |   |   |   |--while
+    |   |   |   |--(
+    |   |   |   |--COND
+    |   |   |   |   |--BOOLSTR
+    |   |   |   |   |   |--false
+    |   |   |   |   |--COMP
+    |   |   |   |   |   |--!=
+    |   |   |   |   |--COND
+    |   |   |   |       |--BOOLSTR
+    |   |   |   |           |--true
+    |   |   |   |--)
+    |   |   |   |--{
+    |   |   |   |--BLOCK
+    |   |   |   |   |--STMT
+    |   |   |   |   |   |--VDECL
+    |   |   |   |   |       |--VTYPE
+    |   |   |   |   |       |   |--char
+    |   |   |   |   |       |--id
+    |   |   |   |   |       |--;
+    |   |   |   |   |--BLOCK
+    |   |   |   |--}
+    |   |   |--BLOCK
+    |   |--RETURN
+    |   |   |--return
+    |   |   |--RHS
+    |   |   |   |--EXPR
+    |   |   |       |--EXPR_D
+    |   |   |           |--EXPR_DD
+    |   |   |               |--num
+    |   |   |--;
+    |   |--}
+    |--CODE_D
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: ACCEPT
+CODE_D
+    |--VDECL
+    |   |--VTYPE
+    |   |   |--int
+    |   |--ASSIGN
+    |   |   |--id
+    |   |   |--=
+    |   |   |--RHS
+    |   |       |--EXPR
+    |   |           |--EXPR_D
+    |   |               |--EXPR_DD
+    |   |                   |--(
+    |   |                   |--EXPR
+    |   |                   |   |--EXPR_D
+    |   |                   |   |   |--EXPR_DD
+    |   |                   |   |       |--num
+    |   |                   |   |--ADDSUB
+    |   |                   |   |   |--+
+    |   |                   |   |--EXPR
+    |   |                   |       |--EXPR_D
+    |   |                   |           |--EXPR_DD
+    |   |                   |               |--num
+    |   |                   |--)
+    |   |--;
+    |--CODE_D
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: ACCEPT
+CODE_D
+    |--VDECL
+    |   |--VTYPE
+    |   |   |--float
+    |   |--ASSIGN
+    |   |   |--id
+    |   |   |--=
+    |   |   |--RHS
+    |   |       |--EXPR
+    |   |           |--EXPR_D
+    |   |               |--EXPR_DD
+    |   |                   |--(
+    |   |                   |--EXPR
+    |   |                   |   |--EXPR_D
+    |   |                   |       |--EXPR_DD
+    |   |                   |       |   |--num
+    |   |                   |       |--MULDIV
+    |   |                   |       |   |--*
+    |   |                   |       |--EXPR_D
+    |   |                   |           |--EXPR_DD
+    |   |                   |               |--num
+    |   |                   |--)
+    |   |--;
+    |--CODE_D
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: ACCEPT
+CODE_D
+    |--FDECL
+    |   |--VTYPE
+    |   |   |--int
+    |   |--id
+    |   |--(
+    |   |--ARG
+    |   |--)
+    |   |--{
+    |   |--BLOCK
+    |   |   |--STMT
+    |   |   |   |--VDECL
+    |   |   |       |--VTYPE
+    |   |   |       |   |--int
+    |   |   |       |--id
+    |   |   |       |--;
+    |   |   |--BLOCK
+    |   |--RETURN
+    |   |   |--return
+    |   |   |--RHS
+    |   |   |   |--EXPR
+    |   |   |       |--EXPR_D
+    |   |   |           |--EXPR_DD
+    |   |   |               |--num
+    |   |   |--;
+    |   |--}
+    |--CODE_D
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: ACCEPT
+CODE_D
+    |--FDECL
+    |   |--VTYPE
+    |   |   |--float
+    |   |--id
+    |   |--(
+    |   |--ARG
+    |   |   |--VTYPE
+    |   |   |   |--float
+    |   |   |--id
+    |   |   |--MOREARGS
+    |   |--)
+    |   |--{
+    |   |--BLOCK
+    |   |   |--STMT
+    |   |   |   |--VDECL
+    |   |   |       |--VTYPE
+    |   |   |       |   |--float
+    |   |   |       |--id
+    |   |   |       |--;
+    |   |   |--BLOCK
+    |   |--RETURN
+    |   |   |--return
+    |   |   |--RHS
+    |   |   |   |--EXPR
+    |   |   |       |--EXPR_D
+    |   |   |           |--EXPR_DD
+    |   |   |               |--num
+    |   |   |--;
+    |   |--}
+    |--CODE_D
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: ACCEPT
+CODE_D
+    |--VDECL
+    |   |--VTYPE
+    |   |   |--int
+    |   |--id
+    |   |--;
+    |--CODE_D
+        |--VDECL
+        |   |--VTYPE
+        |   |   |--float
+        |   |--id
+        |   |--;
+        |--CODE_D
+            |--VDECL
+            |   |--VTYPE
+            |   |   |--char
+            |   |--id
+            |   |--;
+            |--CODE_D
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: ACCEPT
+CODE_D
+    |--VDECL
+    |   |--VTYPE
+    |   |   |--int
+    |   |--ASSIGN
+    |   |   |--id
+    |   |   |--=
+    |   |   |--RHS
+    |   |       |--EXPR
+    |   |           |--EXPR_D
+    |   |               |--EXPR_DD
+    |   |                   |--num
+    |   |--;
+    |--CODE_D
+        |--VDECL
+        |   |--VTYPE
+        |   |   |--float
+        |   |--ASSIGN
+        |   |   |--id
+        |   |   |--=
+        |   |   |--RHS
+        |   |       |--EXPR
+        |   |           |--EXPR_D
+        |   |               |--EXPR_DD
+        |   |                   |--num
+        |   |--;
+        |--CODE_D
+            |--VDECL
+            |   |--VTYPE
+            |   |   |--char
+            |   |--ASSIGN
+            |   |   |--id
+            |   |   |--=
+            |   |   |--RHS
+            |   |       |--character
+            |   |--;
+            |--CODE_D
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: ACCEPT
+CODE_D
+    |--FDECL
+    |   |--VTYPE
+    |   |   |--int
+    |   |--id
+    |   |--(
+    |   |--ARG
+    |   |   |--VTYPE
+    |   |   |   |--int
+    |   |   |--id
+    |   |   |--MOREARGS
+    |   |--)
+    |   |--{
+    |   |--BLOCK
+    |   |   |--STMT
+    |   |   |   |--if
+    |   |   |   |--(
+    |   |   |   |--COND
+    |   |   |   |   |--BOOLSTR
+    |   |   |   |   |   |--true
+    |   |   |   |   |--COMP
+    |   |   |   |   |   |--==
+    |   |   |   |   |--COND
+    |   |   |   |       |--BOOLSTR
+    |   |   |   |           |--false
+    |   |   |   |--)
+    |   |   |   |--{
+    |   |   |   |--BLOCK
+    |   |   |   |--}
+    |   |   |   |--ELSE
+    |   |   |       |--else
+    |   |   |       |--{
+    |   |   |       |--BLOCK
+    |   |   |       |--}
+    |   |   |--BLOCK
+    |   |--RETURN
+    |   |   |--return
+    |   |   |--RHS
+    |   |   |   |--EXPR
+    |   |   |       |--EXPR_D
+    |   |   |           |--EXPR_DD
+    |   |   |               |--num
+    |   |   |--;
+    |   |--}
+    |--CODE_D
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: ACCEPT
+CODE_D
+    |--FDECL
+    |   |--VTYPE
+    |   |   |--char
+    |   |--id
+    |   |--(
+    |   |--ARG
+    |   |--)
+    |   |--{
+    |   |--BLOCK
+    |   |   |--STMT
+    |   |   |   |--while
+    |   |   |   |--(
+    |   |   |   |--COND
+    |   |   |   |   |--BOOLSTR
+    |   |   |   |   |   |--true
+    |   |   |   |   |--COMP
+    |   |   |   |   |   |--==
+    |   |   |   |   |--COND
+    |   |   |   |       |--BOOLSTR
+    |   |   |   |           |--true
+    |   |   |   |--)
+    |   |   |   |--{
+    |   |   |   |--BLOCK
+    |   |   |   |   |--STMT
+    |   |   |   |   |   |--if
+    |   |   |   |   |   |--(
+    |   |   |   |   |   |--COND
+    |   |   |   |   |   |   |--BOOLSTR
+    |   |   |   |   |   |   |   |--false
+    |   |   |   |   |   |   |--COMP
+    |   |   |   |   |   |   |   |--==
+    |   |   |   |   |   |   |--COND
+    |   |   |   |   |   |       |--BOOLSTR
+    |   |   |   |   |   |           |--false
+    |   |   |   |   |   |--)
+    |   |   |   |   |   |--{
+    |   |   |   |   |   |--BLOCK
+    |   |   |   |   |   |--}
+    |   |   |   |   |   |--ELSE
+    |   |   |   |   |--BLOCK
+    |   |   |   |--}
+    |   |   |--BLOCK
+    |   |--RETURN
+    |   |   |--return
+    |   |   |--RHS
+    |   |   |   |--character
+    |   |   |--;
+    |   |--}
+    |--CODE_D
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: ACCEPT
-HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
-HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
-HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
-HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
-HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
-HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
-	ERROR: Unexpected REJECT at static_example/static_accept_case.txt:24 - float id ( ) { int id ; while ( num != num ) { float id ; if ( true == false ) {  } } return num ; }
-	ERROR: Unexpected REJECT at static_example/static_accept_case.txt:25 - int id ; int id ( ) { int id ; return num ; } float id ;
-	ERROR: Unexpected REJECT at static_example/static_accept_case.txt:26 - int id ( int id , char id ) { int id ; return num ; } float id ( ) { return num ; }
-	ERROR: Unexpected REJECT at static_example/static_accept_case.txt:27 - int id ( ) { if ( true == false ) { while ( true != false ) { char id ; } } else { int id ; } return id ; }
-	ERROR: Unexpected REJECT at static_example/static_accept_case.txt:28 - int id = ( num + num ) * ( num - num ) ;
-	ERROR: Unexpected REJECT at static_example/static_accept_case.txt:29 - float id = ( num / num ) + ( num * num ) ;
+CODE_D
+    |--VDECL
+    |   |--VTYPE
+    |   |   |--int
+    |   |--id
+    |   |--;
+    |--CODE_D
+        |--FDECL
+        |   |--VTYPE
+        |   |   |--int
+        |   |--id
+        |   |--(
+        |   |--ARG
+        |   |--)
+        |   |--{
+        |   |--BLOCK
+        |   |   |--STMT
+        |   |   |   |--VDECL
+        |   |   |       |--VTYPE
+        |   |   |       |   |--int
+        |   |   |       |--id
+        |   |   |       |--;
+        |   |   |--BLOCK
+        |   |--RETURN
+        |   |   |--return
+        |   |   |--RHS
+        |   |   |   |--EXPR
+        |   |   |       |--EXPR_D
+        |   |   |           |--EXPR_DD
+        |   |   |               |--num
+        |   |   |--;
+        |   |--}
+        |--CODE_D
+            |--VDECL
+            |   |--VTYPE
+            |   |   |--float
+            |   |--id
+            |   |--;
+            |--CODE_D
+HOGEUN_KYUSUNG_SLR_PARSER RESULT: ACCEPT
+CODE_D
+    |--FDECL
+    |   |--VTYPE
+    |   |   |--int
+    |   |--id
+    |   |--(
+    |   |--ARG
+    |   |   |--VTYPE
+    |   |   |   |--int
+    |   |   |--id
+    |   |   |--MOREARGS
+    |   |       |--,
+    |   |       |--VTYPE
+    |   |       |   |--char
+    |   |       |--id
+    |   |       |--MOREARGS
+    |   |--)
+    |   |--{
+    |   |--BLOCK
+    |   |   |--STMT
+    |   |   |   |--VDECL
+    |   |   |       |--VTYPE
+    |   |   |       |   |--int
+    |   |   |       |--id
+    |   |   |       |--;
+    |   |   |--BLOCK
+    |   |--RETURN
+    |   |   |--return
+    |   |   |--RHS
+    |   |   |   |--EXPR
+    |   |   |       |--EXPR_D
+    |   |   |           |--EXPR_DD
+    |   |   |               |--num
+    |   |   |--;
+    |   |--}
+    |--CODE_D
+        |--FDECL
+        |   |--VTYPE
+        |   |   |--float
+        |   |--id
+        |   |--(
+        |   |--ARG
+        |   |--)
+        |   |--{
+        |   |--BLOCK
+        |   |--RETURN
+        |   |   |--return
+        |   |   |--RHS
+        |   |   |   |--EXPR
+        |   |   |       |--EXPR_D
+        |   |   |           |--EXPR_DD
+        |   |   |               |--num
+        |   |   |--;
+        |   |--}
+        |--CODE_D
+HOGEUN_KYUSUNG_SLR_PARSER RESULT: ACCEPT
+CODE_D
+    |--FDECL
+    |   |--VTYPE
+    |   |   |--int
+    |   |--id
+    |   |--(
+    |   |--ARG
+    |   |--)
+    |   |--{
+    |   |--BLOCK
+    |   |   |--STMT
+    |   |   |   |--if
+    |   |   |   |--(
+    |   |   |   |--COND
+    |   |   |   |   |--BOOLSTR
+    |   |   |   |   |   |--true
+    |   |   |   |   |--COMP
+    |   |   |   |   |   |--==
+    |   |   |   |   |--COND
+    |   |   |   |       |--BOOLSTR
+    |   |   |   |           |--false
+    |   |   |   |--)
+    |   |   |   |--{
+    |   |   |   |--BLOCK
+    |   |   |   |   |--STMT
+    |   |   |   |   |   |--while
+    |   |   |   |   |   |--(
+    |   |   |   |   |   |--COND
+    |   |   |   |   |   |   |--BOOLSTR
+    |   |   |   |   |   |   |   |--true
+    |   |   |   |   |   |   |--COMP
+    |   |   |   |   |   |   |   |--!=
+    |   |   |   |   |   |   |--COND
+    |   |   |   |   |   |       |--BOOLSTR
+    |   |   |   |   |   |           |--false
+    |   |   |   |   |   |--)
+    |   |   |   |   |   |--{
+    |   |   |   |   |   |--BLOCK
+    |   |   |   |   |   |   |--STMT
+    |   |   |   |   |   |   |   |--VDECL
+    |   |   |   |   |   |   |       |--VTYPE
+    |   |   |   |   |   |   |       |   |--char
+    |   |   |   |   |   |   |       |--id
+    |   |   |   |   |   |   |       |--;
+    |   |   |   |   |   |   |--BLOCK
+    |   |   |   |   |   |--}
+    |   |   |   |   |--BLOCK
+    |   |   |   |--}
+    |   |   |   |--ELSE
+    |   |   |       |--else
+    |   |   |       |--{
+    |   |   |       |--BLOCK
+    |   |   |       |   |--STMT
+    |   |   |       |   |   |--VDECL
+    |   |   |       |   |       |--VTYPE
+    |   |   |       |   |       |   |--int
+    |   |   |       |   |       |--id
+    |   |   |       |   |       |--;
+    |   |   |       |   |--BLOCK
+    |   |   |       |--}
+    |   |   |--BLOCK
+    |   |--RETURN
+    |   |   |--return
+    |   |   |--RHS
+    |   |   |   |--EXPR
+    |   |   |       |--EXPR_D
+    |   |   |           |--EXPR_DD
+    |   |   |               |--id
+    |   |   |--;
+    |   |--}
+    |--CODE_D
+HOGEUN_KYUSUNG_SLR_PARSER RESULT: ACCEPT
+CODE_D
+    |--VDECL
+    |   |--VTYPE
+    |   |   |--int
+    |   |--ASSIGN
+    |   |   |--id
+    |   |   |--=
+    |   |   |--RHS
+    |   |       |--EXPR
+    |   |           |--EXPR_D
+    |   |               |--EXPR_DD
+    |   |               |   |--(
+    |   |               |   |--EXPR
+    |   |               |   |   |--EXPR_D
+    |   |               |   |   |   |--EXPR_DD
+    |   |               |   |   |       |--num
+    |   |               |   |   |--ADDSUB
+    |   |               |   |   |   |--+
+    |   |               |   |   |--EXPR
+    |   |               |   |       |--EXPR_D
+    |   |               |   |           |--EXPR_DD
+    |   |               |   |               |--num
+    |   |               |   |--)
+    |   |               |--MULDIV
+    |   |               |   |--*
+    |   |               |--EXPR_D
+    |   |                   |--EXPR_DD
+    |   |                       |--(
+    |   |                       |--EXPR
+    |   |                       |   |--EXPR_D
+    |   |                       |   |   |--EXPR_DD
+    |   |                       |   |       |--num
+    |   |                       |   |--ADDSUB
+    |   |                       |   |   |---
+    |   |                       |   |--EXPR
+    |   |                       |       |--EXPR_D
+    |   |                       |           |--EXPR_DD
+    |   |                       |               |--num
+    |   |                       |--)
+    |   |--;
+    |--CODE_D
+HOGEUN_KYUSUNG_SLR_PARSER RESULT: ACCEPT
+CODE_D
+    |--VDECL
+    |   |--VTYPE
+    |   |   |--float
+    |   |--ASSIGN
+    |   |   |--id
+    |   |   |--=
+    |   |   |--RHS
+    |   |       |--EXPR
+    |   |           |--EXPR_D
+    |   |           |   |--EXPR_DD
+    |   |           |       |--(
+    |   |           |       |--EXPR
+    |   |           |       |   |--EXPR_D
+    |   |           |       |       |--EXPR_DD
+    |   |           |       |       |   |--num
+    |   |           |       |       |--MULDIV
+    |   |           |       |       |   |--/
+    |   |           |       |       |--EXPR_D
+    |   |           |       |           |--EXPR_DD
+    |   |           |       |               |--num
+    |   |           |       |--)
+    |   |           |--ADDSUB
+    |   |           |   |--+
+    |   |           |--EXPR
+    |   |               |--EXPR_D
+    |   |                   |--EXPR_DD
+    |   |                       |--(
+    |   |                       |--EXPR
+    |   |                       |   |--EXPR_D
+    |   |                       |       |--EXPR_DD
+    |   |                       |       |   |--num
+    |   |                       |       |--MULDIV
+    |   |                       |       |   |--*
+    |   |                       |       |--EXPR_D
+    |   |                       |           |--EXPR_DD
+    |   |                       |               |--num
+    |   |                       |--)
+    |   |--;
+    |--CODE_D
+HOGEUN_KYUSUNG_SLR_PARSER RESULT: ACCEPT
+File: static_example/static_accept_case.txt - Passed: 28 /       28 (100.00%)
 Testing file static_example/static_reject_case.txt:
+Reject at state 10, unexpected token: $
+line : 1
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 10, unexpected token: $
+line : 2
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 10, unexpected token: $
+line : 3
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 14, unexpected token: ;
+line : 4
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 14, unexpected token: ;
+line : 5
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 14, unexpected token: ;
+line : 6
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 14, unexpected token: unknown
+line : 7
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 14, unexpected token: 'a'
+line : 8
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 14, unexpected token: 5
+line : 9
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 14, unexpected token: 3.14
+line : 10
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 0, unexpected token: if
+line : 11
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 0, unexpected token: while
+line : 12
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 60, unexpected token: return
+line : 13
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 12, unexpected token: {
+line : 14
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 33, unexpected token: )
+line : 15
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 36, unexpected token: )
+line : 16
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 0, unexpected token: if
+line : 17
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 0, unexpected token: while
+line : 18
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 41, unexpected token: )
+line : 19
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 5, unexpected token: )
+line : 20
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 60, unexpected token: return
+line : 21
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 55, unexpected token: 'c'
+line : 22
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 0, unexpected token: if
+line : 23
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 0, unexpected token: while
+line : 24
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 33, unexpected token: )
+line : 25
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 36, unexpected token: )
+line : 26
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 41, unexpected token: )
+line : 27
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 5, unexpected token: )
+line : 28
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 60, unexpected token: return
+line : 29
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 55, unexpected token: 'a'
+line : 30
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 45, unexpected token: }
+line : 31
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 0, unexpected token: if
+line : 32
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 0, unexpected token: while
+line : 33
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 60, unexpected token: return
+line : 34
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 61, unexpected token: {
+line : 35
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 55, unexpected token: ;
+line : 36
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 14, unexpected token: 'a'
+line : 37
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 29, unexpected token: float
+line : 38
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 0, unexpected token: if
+line : 39
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 0, unexpected token: while
+line : 40
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 33, unexpected token: ;
+line : 41
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 36, unexpected token: ;
+line : 42
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 71, unexpected token: )
+line : 43
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 59, unexpected token: !=
+line : 44
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 41, unexpected token: )
+line : 45
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 6, unexpected token: )
+line : 46
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 55, unexpected token: 'a'
+line : 47
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 0, unexpected token: if
+line : 48
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 0, unexpected token: while
+line : 49
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
+Reject at state 77, unexpected token: return
+line : 50
 HOGEUN_KYUSUNG_SLR_PARSER RESULT: REJECT
-Total Passed: 23 / 79 (29.00%), Total Rejected: 50 / 79 (63.00%)
-Unexpected cases:
-	ERROR: Unexpected REJECT at static_example/static_accept_case.txt:24 - float id ( ) { int id ; while ( num != num ) { float id ; if ( true == false ) {  } } return num ; }
-	ERROR: Unexpected REJECT at static_example/static_accept_case.txt:25 - int id ; int id ( ) { int id ; return num ; } float id ;
-	ERROR: Unexpected REJECT at static_example/static_accept_case.txt:26 - int id ( int id , char id ) { int id ; return num ; } float id ( ) { return num ; }
-	ERROR: Unexpected REJECT at static_example/static_accept_case.txt:27 - int id ( ) { if ( true == false ) { while ( true != false ) { char id ; } } else { int id ; } return id ; }
-	ERROR: Unexpected REJECT at static_example/static_accept_case.txt:28 - int id = ( num + num ) * ( num - num ) ;
-	ERROR: Unexpected REJECT at static_example/static_accept_case.txt:29 - float id = ( num / num ) + ( num * num ) ;
+File: static_example/static_reject_case.txt - Passed: 50 /       50 (100.00%)
+[0;34m** PERFECT **[0m
