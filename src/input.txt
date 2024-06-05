@@ -48,7 +48,3 @@ char id ( ) { return 'a' ; else { return 'b' ; } }
 if ( true ) { int id ; else { float id ; } }
 while ( false ) { int id ; if ( true ) { char id ; }
 int id ( ) { if ( true == false ) { return num ; } else return num ; }
-
-
-
-float id ( ) { int id ; while ( num != num ) { float id ; if ( true == false ) {  } } return num ; }
