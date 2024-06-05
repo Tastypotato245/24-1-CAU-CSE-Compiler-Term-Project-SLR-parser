@@ -1,3 +1,4 @@
+# 문법 파싱해서 규칙 데이터 만들기
 def parse_grammar(grammar_file):
     rules = []
     with open(grammar_file, 'r') as file:
@@ -15,6 +16,7 @@ def parse_grammar(grammar_file):
                 rules.append((left, rule_length))
     return rules
 
+# 테이블 파싱해서 딕셔너리 형태로 만들기
 def parse_parse_table(parse_table_file):
     parse_table = []
     with open(parse_table_file, 'r') as file:
