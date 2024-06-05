@@ -37,16 +37,16 @@ class SLRParser:
         self.statestack.append(0)
         self.inputStack = []  # input을 넣으며 실제로 reduce 하는 데 사용하는 스택임
         self.inputStack.append('$')
-        self.nodequeue = []
+        self.nodequeue = []  # tree를 관리할 스택
 
-    def value_exists(self, current_state, current_token: str):
-        try:
-            value = self.parse_table[current_state][current_token]
-            return True
-        except KeyError:
-            return False
-        except IndexError:
-            return False
+    # def value_exists(self, current_state, current_token: str):
+    #     try:
+    #         value = self.parse_table[current_state][current_token]
+    #         return True
+    #     except KeyError:
+    #         return False
+    #     except IndexError:
+    #         return False
 
     def parse(self, tokens):
         current_state = 0
@@ -89,6 +89,7 @@ class SLRParser:
                 # inputStack에 현재 토큰을 push함
                 self.inputStack.append(current_token)
                 # 트리에 출력에 활용하기 위해 큐에 붙임
+                # 트리 구성을 위해 shift의 경우 queue 배열에 append함
                 self.nodequeue.append(TreeNode(current_token))
                 # 상태 스택에 이제 해야하는 action을 push함
                 self.statestack.append(int(action[1:]))
@@ -96,6 +97,9 @@ class SLRParser:
             elif action.startswith('r'):
                 # action이 r일 때는 reduce를 함.
                 node = TreeNode(self.rules[int(action[1:])][0])
+                # reduce할 노드의 갯수를 받아 queue 길이에서 빼줌
+                # reduce의 경우 뒤에 추가된 노드가 우선적으로 reduce되지만 input의 순서 상 reduce되는 노드들의 경우 먼저 추가된 노드가 먼저 pop해야함
+                # 이 때문에 reduce가 시작되는 위치에서 pop을 시작
                 pop_ = len(self.nodequeue) - self.rules[int(action[1:])][1]
                 # grammar인 rules에서 그것의 길이만큼 빼줘야함. 그만큼 reduce된 것이니.
                 for _ in range(self.rules[int(action[1:])][1]):
@@ -103,7 +107,10 @@ class SLRParser:
                     # print(self.rules[int(action[1:])][1])
                     # print(f'debug : {int(action[1:])}')
                     # print(f'pop:{self.inputStack.pop()}')
+                    # 트리에 pop한 노드 추가
+                    # reduce될 노드의 개수만큼 for loop
                     node.add_child(self.nodequeue.pop(pop_))
+                # reduce된 노드를 queue에 append
                 self.nodequeue.append(node)
                 self.inputStack.append(self.rules[int(action[1:])][0])
                 # 현재 상태와 토큰을 업데이트 해줌 (top에 있는 거로 최신화 해주는 것임)
@@ -132,6 +139,7 @@ class SLRParser:
                 self.statestack.append(int(action))
             elif action == 'acc':
                 # accept할 때임.
+                # accept의 경우 현재 node queue에 있는 node가 root
                 print_tree(node)
                 self.statestack = []
                 self.statestack.append(0)
