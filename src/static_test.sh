@@ -3,7 +3,7 @@
 # 디렉터리 및 파일 설정
 accept_file="static_example/static_accept_case.txt"
 reject_file="static_example/static_reject_case.txt"
-log_file="static_test_log"
+log_file="static_test.log"
 > "$log_file"
 
 # 예상치 못한 결과를 저장할 배열
